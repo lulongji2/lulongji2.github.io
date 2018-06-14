@@ -1,42 +1,473 @@
----
-layout: page
-description: "知识源于实践，这是我的博客。"
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<meta name="description" content="承接网站研发，微信公众号，微信小程序等项目。">
+<meta name="keywords" content="电商运营、网站开发、外包公司、java、it、互联网" />
 
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-        <div class="post-content-preview">
-            {{ post.content | strip_html | truncate:200 }}
+<!-- Favicons
+    ================================================== -->
+
+<link rel="shortcut icon" href="img/favicon_jianli.ico" type="image/x-icon">
+
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+
+<!-- Slider
+    ================================================== -->
+<link href="css/owl.carousel.css" rel="stylesheet" media="screen">
+<link href="css/owl.theme.css" rel="stylesheet" media="screen">
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css"  href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+
+<link rel="stylesheet" type="text/css" href="fonts/sns_fonts/iconfont.css">
+
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top"><i class="fa fa-terminal"></i>圣亚网络</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">专业团队</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#works">服务支持</a>
+                    </li>                    
+                    <li>
+                        <a class="page-scroll" href="#about">一站式服务</a>
+                    </li>                    
+                    <li>
+                        <a class="page-scroll" href="#team">经典案例</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#testimonials">企业承诺</a>
+                    </li>                    
+                    <li>
+                        <a class="page-scroll" href="#contact">联系我们</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-    </a>
-    <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
-</div>
-<hr>
-{% endfor %}
+        <!-- /.container -->
+    </nav>
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; 上一页</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页 &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
+<!-- Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1>圣亚网络<span class="brand-heading">-科技有限公司</span></h1>
+                        <p class="intro-text">Sheng Ya Wang Luo science and technology limited company.</p>
+                        <a href="#services" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<!-- Services Section -->
+<div id="services" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2>专业 <strong>团队</strong></h2>
+      <hr>
+      </div>
+    <div class="space"></div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-laptop"></i>
+        <h4><strong>专业</strong></h4>
+        <p>
+            信息说明信息说明信息</br>
+		    </p>
+      </div>
+      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-code"></i>
+        <h4><strong>专业</strong></h4>
+        <p>
+            信息说明信息说明信息</br>
+		    </p>
+      </div>
+      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-rocket"></i>
+        <h4><strong>专业</strong></h4>
+        <p>
+		    信息说明信息说明信息</br>
+		    </p>
+      </div>
+      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-bullseye"></i>
+        <h4><strong>专业</strong></h4>
+        <p>
+            信息说明信息说明信息</br>
+		    </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Portfolio Section -->
+<div id="works">
+  <div class="container"> <!-- Container -->
+    <div class="section-title text-center center">
+      <h2>服务 <strong>支持</strong></h2>
+      <hr>
+      <div class="clearfix"></div>
+      <p>主要涉及电商运营，网站研发（包括PC端，手机端，微信端，移动APP端）等等</p>
+    </div>
+    <div class="categories">
+      <ul class="cat">
+        <li>
+          <ol class="type">
+            <li><a href="#" data-filter="*" class="active">所有</a></li>
+            <li><a href="#" data-filter=".web">程序开发</a></li>
+            <li><a href="#" data-filter=".app">电商运营</a></li>
+            <li><a href="#" data-filter=".branding">其他服务</a></li>
+          </ol>
+        </li>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+    <div class="row">
+      <div class="portfolio-items">
+	  
+        <div class="col-sm-6 col-md-3 col-lg-3 web">
+          <div class="portfolio-item">
+            <div class="hover-bg">
+              <div class="hover-text">
+                <h4><a href='http://www.ymjihe.com' target='_blank' title="欧工商城">欧工商城</a></h4>
+                <small>技术支持</small>
+                <div class="clearfix"></div>
+                <i class="fa fa-search"></i> </div>
+              <img src="img/portfolio/01.jpg" class="img-responsive" alt="欧工商城"></div>
+          </div>
+        </div>
+		
+        <div class="col-sm-6 col-md-3 col-lg-3 web">
+          <div class="portfolio-item">
+            <div class="hover-bg">
+              <div class="hover-text">
+                <h4><a href="http://www.ymjihe.com" target='_blank' title="财树理财">财树理财</a></h4>
+                <small>技术支持</small>
+                <div class="clearfix"></div>
+                <i class="fa fa-search"></i> </div>
+              <img src="img/portfolio/02.jpg" class="img-responsive" alt="财树理财"></div>
+          </div>
+        </div>
+		
+        <div class="col-sm-6 col-md-3 col-lg-3 web">
+          <div class="portfolio-item">
+            <div class="hover-bg">
+              <div class="hover-text">
+                <h4><a href="http://www.ymjihe.com" target='_blank' title="IT技术之家">IT技术之家</a></h4>
+                <small>技术支持</small>
+                <div class="clearfix"></div>
+                <i class="fa fa-search"></i> </div>
+              <img src="img/portfolio/03.jpg" class="img-responsive" alt="IT技术之家"></div>
+          </div>
+        </div>
+		
+        <div class="col-sm-6 col-md-3 col-lg-3 web">
+          <div class="portfolio-item">
+            <div class="hover-bg">
+              <div class="hover-text">
+                <h4><a href='http://www.ymjihe.com' target='_blank' title="久久基因">久久基因</h4>
+                <small>技术支持</small>
+                <div class="clearfix"></div>
+                <i class="fa fa-search"></i> </div>
+              <img src="img/portfolio/04.jpg" class="img-responsive" alt="久久基因"></div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 web">
+          <div class="portfolio-item">
+            <div class="hover-bg">
+              <div class="hover-text">
+                <h4><a href='http://www.ymjihe.com' target='_blank' title="纵横基因">纵横基因</a></h4>
+                <small>技术支持</small>
+                <div class="clearfix"></div>
+                <i class="fa fa-search"></i> </div>
+              <img src="img/portfolio/05.jpg" class="img-responsive" alt="纵横基因">
+			  </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 branding">
+          <div class="portfolio-item">
+            <div class="hover-bg">
+              <div class="hover-text">
+                <h4><a href="http://www.ymjihe.com" target='_blank' title="浙江网新恒天UED">浙江网新恒天UED</a></h4>
+                <small>技术支持</small>
+                <div class="clearfix"></div>
+                <i class="fa fa-search"></i> </div>
+              <img src="img/portfolio/06.jpg" class="img-responsive" alt="浙江网新恒天UED"></div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 branding app web">
+          <div class="portfolio-item">
+            <div class="hover-bg">
+              <div class="hover-text">
+                <h4><a href="http://www.ymjihe.com" target='_blank' title="个人博客">个人博客</a></h4>
+                <small>技术支持</small>
+                <div class="clearfix"></div>
+                <i class="fa fa-search"></i> </div>
+              <img src="img/portfolio/07.jpg" class="img-responsive" alt="个人博客"></div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 web app">
+          <div class="portfolio-item">
+		  
+            <div class="hover-bg"> 
+              <div class="hover-text">
+                <h4><a href='http://www.ymjihe.com' target='_blank' title="软装大师">软装大师 </a></h4>
+                <small>技术支持</small>
+                <div class="clearfix"></div>
+                <i class="fa fa-search"></i> 
+				</div>
+              <img src="img/portfolio/08.jpg" class="img-responsive" alt="软装大师">
+		    </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- About Section -->
+<div id="about">
+  <div class="container">
+    <div class="section-title text-center center">
+      <h2><strong>一站式</strong>服务</h2>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-md-6"> <img src="img/about.png" class="img-responsive"> </div>
+      <div class="col-md-6">
+        <div class="about-text"> <i class="fa fa-users"></i>
+          <div class="padding-left"><h4>服务</h4>
+          <p>服务</p></div>
+          <i class="fa fa-magic"></i>
+          <div class="padding-left"><h4>服务</h4>
+          <p>服务</p></div>
+          <i class="fa fa-check-square-o"></i>
+          <div class="padding-left"><h4>服务</h4>
+          <p>服务</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+	<div id="achivements" class="section dark-bg">
+			<div class="container">	
+				<div class="row">
+					<div class="col-md-3 col-sm-3">
+						<div class="achivement-box">
+							<i class="fa fa-smile-o"></i>
+							<span class="count">25</span>
+							<h4>专业数据</h4>                            
+						</div>
+					</div> 
+					<div class="col-md-3 col-sm-3">
+						<div class="achivement-box">
+							<i class="fa fa-code"></i>
+							<span class="count">100000</span>
+							<h4>专业数据</h4>                            
+						</div>
+					</div> 
+					<div class="col-md-3 col-sm-3">
+						<div class="achivement-box">
+							<i class="fa fa-check-square-o"></i>
+							<span class="count">4800</span>
+                            <h4>专业数据</h4>
+						</div>
+					</div> 
+					<div class="col-md-3 col-sm-3">
+						<div class="achivement-box">
+							<i class="fa fa-trophy"></i>
+							<span class="count">20</span>
+							<h4>专业数据</h4>                            
+						</div>
+					</div> 
+				</div>
+			</div>
+		</div>
+<!-- Team Section -->
+<div id="team" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2>经典 <strong>案例</strong></h2>
+      <hr>
+      <p>经典案例-经典案例-经典案例-经典案例-经典案例-用户体验</p>
+    </div>
+    <div id="row">
+	
+	<div class="col-md-3 col-sm-6">
+        <div class="thumbnail"> <img src="img/team/02.jpg" alt="浙江理工大学" class="img-circle team-img">
+          <div class="caption">
+            <h3>项目一</h3>
+            <p>名称</p>
+            <p>项目简介项目简介项目简介项目简介项目简介项目简介项目简介项目简介项目简介项目简介项目简介</p>
+          </div>
+        </div>
+      </div>
+	
+      <div class="col-md-3 col-sm-6">
+        <div class="thumbnail"> <img src="img/team/01.jpg" alt="杭州归谷培训中心" class="img-circle team-img">
+          <div class="caption">
+            <h3>项目二</h3>
+            <p>名称</p>
+            <p>项目简介项目简介项目简介项目简介项目简介项目简介项目简介项目简介项目简介项目简介项目简介</p>
+          </div>
+        </div>
+      </div>
+	  
+	  
+      <div class="col-md-3 col-sm-6">
+        <div class="thumbnail"> <img src="img/team/03.jpg" alt="浙大网新" class="img-circle team-img">
+          <div class="caption">
+              <h3>项目三</h3>
+              <p>名称</p>
+              <p>项目简介项目简介项目简介项目简介项目简介项目简介项目简介项目简介项目简介项目简介项目简介</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="thumbnail"> <img src="img/team/04.jpg" alt="欧工国际" class="img-circle team-img">
+          <div class="caption">
+              <h3>项目四</h3>
+              <p>名称</p>
+              <p>项目简介项目简介项目简介项目简介项目简介项目简介项目简介项目简介项目简介项目简介项目简介</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Testimonials Section -->
+<div id="testimonials" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2>企业 <strong>承诺</strong></h2>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div id="testimonial" class="owl-carousel owl-theme">
+          <div class="item">       
+            <p>
+			专业的团队随时问您打造高质量的营销数据。</br>竭诚为您服务。
+			</p>
+          </div>
+          <div class="item">
+            <p>
+                专业的团队随时问您打造高质量的营销数据。</br>竭诚为您服务。
+			</p>
+          </div>
+          <div class="item">
+            <p>
+                专业的团队随时问您打造高质量的营销数据。</br>竭诚为您服务。
+			</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<div id="contact" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2><strong>联系</strong> 方式</h2>
+      <hr>
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-4"> <i class="fa fa-map-marker fa-2x"></i>
+        <p>河北省衡水市桃城区和平路南侧御园小区</p>
+      </div>
+      <div class="col-md-4"> <i class="fa fa-envelope-o fa-2x"></i>
+        <p>admin@admin.com</p>
+      </div>
+      <div class="col-md-4"> <i class="fa fa-phone fa-2x"></i>
+        <p>电话:18600000000</p>
+      </div>
+      <hr>
+      <div class="clearfix"></div>
+    </div>
+</div>
+</div>
+<nav id="footer">
+  <div class="container">
+    <div class="pull-left fnav">
+      <p><center>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        Copyright &copy; 2017-2018  &nbsp;&nbsp;河北圣亚网络科技有限公司 </center></p>
+    </div>
+    <div class="pull-right fnav">
+   
+    </div>
+  </div>
+</nav>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script type="text/javascript" src="js/bootstrap.js"></script> 
+<script type="text/javascript" src="js/SmoothScroll.js"></script> 
+<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script> 
+<script type="text/javascript" src="js/jquery.isotope.js"></script> 
+<script type="text/javascript" src="js/jquery.counterup.js"></script> 
+<script type="text/javascript" src="js/waypoints.js"></script>
+<script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
+<script type="text/javascript" src="js/contact_me.js"></script>
+<script src="js/owl.carousel.js"></script>
+
+<!-- Javascripts
+    ================================================== --> 
+<script type="text/javascript" src="js/main.js"></script>
+
+<script>
+ $(function()
+ {
+ var u = navigator.userAgent;
+if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1||u.indexOf('iPhone') > -1||u.indexOf('Windows Phone') > -1||navigator.userAgent.indexOf("iPad")>-1) {
+   $(".hover-bg .hover-text").css({'opacity':'1'});
+   
+   $(".hover-bg .hover-text>h4").css({'opacity':'1','-webkit-transform':'translateY(0)','transform':'translateY(0)'});
+   
+   $(".hover-bg .hover-text>i").css({'opacity':'1'});
+} 
+    
+ });
+  
+</script>
+</body>
+</html>
