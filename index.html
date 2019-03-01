@@ -1,12 +1,10 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>lulongji</title>
+    <title>Pop HTML5 Template</title>
     <!-- load CSS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300">  <!-- Google web font "Open Sans" -->
     <link rel="stylesheet" href="css/bootstrap.min.css">                                  <!-- https://getbootstrap.com/ -->
@@ -27,7 +25,7 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-6 col-lg-6 col-md-col-xl-6 mb-md-0 mb-sm-4 mb-4 tm-site-header-col">
                         <div class="tm-site-header">
-                            <h1 class="mb-4">鲁龙基</h1>
+                            <h1 class="mb-4">POP design</h1>
                             <img src="img/underline.png" class="img-fluid mb-4">
                             <p>New HTML Template with pop up pages and use this layout for your website</p>        
                         </div>                        
@@ -184,7 +182,7 @@
             <footer>
                 <p class="small tm-copyright-text">Copyright &copy; <span class="tm-current-year">2018</span> Your Company. 
                 
-                Layout: <a rel="nofollow" href="#/view/2097-pop" class="tm-text-highlight">Pop Design</a> More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家"></a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank"></a></p>
+                Layout: <a rel="nofollow" href="#/view/2097-pop" class="tm-text-highlight">Pop Design</a> More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
             </footer>
         </div> <!-- .tm-main-content -->  
     </div>
@@ -192,7 +190,7 @@
     <script src="http://raw.githack.com/lulongji2/lulongji2.github.io/master/js/jquery-3.2.1.slim.min.js"></script>         <!-- https://jquery.com/ -->    
     <script src="http://raw.githack.com/lulongji2/lulongji2.github.io/master/slick/slick.min.js"></script>                  <!-- http://kenwheeler.github.io/slick/ -->  
     <script src="http://raw.githack.com/lulongji2/lulongji2.github.io/master/js/anime.min.js"></script>                     <!-- http://animejs.com/ -->
-    <script src="http://raw.githack.com/lulongji2/lulongji2.github.io/master/js/main.js"></script>  
+    <script src="http://raw.githack.com/lulongji2/lulongji2.github.io/master/js/main.js"></script> 
     <script>      
 
         function setupFooter() {
@@ -225,47 +223,3 @@
 
 </body>
 </html>
-=======
----
-description: Seven times have I despised my soul
-layout: page
----
-
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-        <div class="post-content-preview">
-            {{ post.content | strip_html | truncate:200 }}
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
-</div>
-<hr>
-{% endfor %}
-
-<!-- 分页 -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; 上一页</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页 &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
->>>>>>> yueh-github/master
